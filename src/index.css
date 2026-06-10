@@ -1,8 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0b1a32;
+  --color-navy2: #132240;
+  --color-navy3: #1c3260;
+  --color-gold: #c8a84b;
+  --color-gold-lt: #e2c96e;
+  --color-gold-dk: #a8892e;
+  --color-cream: #f7f3ec;
+  --color-offwhite: #fdfaf6;
+  --color-dark: #060e1c;
+  --color-muted: #7e8494;
+  --color-muted2: #b0b5c0;
+}
 /* ============================================================
    VILLA ESMERALDA — Design System
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap');
 
 /* ── Tokens ──────────────────────────────────────────────── */
 :root {

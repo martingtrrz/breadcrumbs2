@@ -11,11 +11,27 @@ const INITIAL_FORM = {
   mensaje: '',
 }
 
+// En Contacto.jsx, reemplaza el arreglo CONTACT_INFO:
 const CONTACT_INFO = [
-  { icon: '📍', label: 'Dirección', value: 'Av. de los Eventos 1200, Col. Centro, Ciudad de México' },
-  { icon: '📞', label: 'Teléfono', value: '+52 (55) 1234-5678' },
-  { icon: '✉', label: 'Correo electrónico', value: 'eventos@villaesmeralda.mx' },
-  { icon: '🕐', label: 'Horario de atención', value: 'Lunes a Sábado, 9:00 — 19:00 hrs' },
+  { 
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+      </svg>
+    ), 
+    label: 'Dirección', 
+    value: 'Av. de los Eventos 1200, Col. Centro, Ciudad de México' 
+  },
+  { 
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.596-5.48-4.18-7.077-7.077l1.293-.97c.362-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+      </svg>
+    ), 
+    label: 'Teléfono', 
+    value: '+52 (55) 1234-5678' 
+  },
 ]
 
 export default function Contacto() {

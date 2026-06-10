@@ -26,14 +26,26 @@ export default function ReserveModal({ modal, onClose }) {
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value })
 
-  const handleSubmit = (e) => {
+const handleSubmit = (e) => {
     e.preventDefault()
     if (!form.nombre || !form.telefono) return
-    setSubmitted(true)
-    // Simulate API call
-    setTimeout(() => { onClose() }, 3000)
-  }
 
+    // Numero de telefono del cliente local (con codigo de pais)
+    const numeroNegocio = "5215500000000"; 
+    
+    // Construccion del mensaje dinamico
+    const mensaje = `Hola, me llamo ${form.nombre}. Me interesa reservar el paquete *${pkg?.name}* (Precio aprox: ${pkg?.priceFormatted}). Mi número de contacto es ${form.telefono} y mi fecha estimada es el ${form.fecha || '... (por definir)'}. ¿Tienen disponibilidad?`;
+    
+    const urlWhatsApp = `https://wa.me/${numeroNegocio}?text=${encodeURIComponent(mensaje)}`;
+
+    setSubmitted(true);
+    
+    // Redirigir al usuario a WhatsApp despues de un breve momento
+    setTimeout(() => {
+      window.open(urlWhatsApp, '_blank');
+      onClose();
+    }, 1500);
+  }
   if (!modal.open) return null
   const pkg = modal.pkg
 
