@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-
+import Logo from './Logo'; // Asegúrate de tener un componente Logo o ajusta el path
 /* ───────────────────────────────────────────────────
    Native SVG icons — NO emojis allowed
    ─────────────────────────────────────────────────── */

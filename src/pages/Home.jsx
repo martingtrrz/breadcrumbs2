@@ -2,7 +2,14 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useScrollReveal, useCounters } from '../hooks/useScrollReveal'
 
-// En Home.jsx, reemplaza el arreglo FEATURES:
+// Importación de imágenes locales
+import img1 from '../assets/img1.png'
+import img2 from '../assets/img2.png'
+import img3 from '../assets/img3.png'
+import img4 from '../assets/img4.png'
+import img5 from '../assets/img5.png'
+
+// Arreglo de características con iconos SVG nativos
 const FEATURES = [
   { 
     icon: (
@@ -13,7 +20,33 @@ const FEATURES = [
     label: 'Diseño de interiores', 
     sub: 'Ambientación personalizada' 
   },
-  // ... reemplaza los demás atributos (♪, ◈, ⚑) por SVGs correspondientes
+  { 
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 19.5V15m0 0l6-3v9m-6-6l-3 1.5m9-1.5l3 1.5M9 15V9.75m0 0a3 3 0 013-3h3a3 3 0 013 3v5.25" />
+      </svg>
+    ), 
+    label: 'Equipo audiovisual', 
+    sub: 'Sonido e iluminación 4K' 
+  },
+  { 
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+      </svg>
+    ), 
+    label: 'Jardín y terraza', 
+    sub: 'Espacios al aire libre' 
+  },
+  { 
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+      </svg>
+    ), 
+    label: 'Catering gourmet', 
+    sub: 'Cocina internacional' 
+  }
 ]
 
 const STATS = [
@@ -23,12 +56,13 @@ const STATS = [
   { target: 98, suffix: '%', label: 'Clientes satisfechos' },
 ]
 
+// Uso de las imágenes importadas dinámicamente
 const GALLERY_PREVIEW = [
-  { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=900&q=80', label: 'Salón principal' },
-  { src: 'https://images.unsplash.com/photo-1464344497347-6f4f7c3d2f28?auto=format&fit=crop&w=700&q=80', label: 'Terraza exterior' },
-  { src: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=700&q=80', label: 'Banquetes' },
-  { src: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=700&q=80', label: 'Lounge bar' },
-  { src: 'https://images.unsplash.com/photo-1523416091380-8a21a3a1f0e8?auto=format&fit=crop&w=700&q=80', label: 'Jardín de noche' },
+  { src: img1, label: 'Salón principal' },
+  { src: img2, label: 'Terraza exterior' },
+  { src: img3, label: 'Banquetes' },
+  { src: img4, label: 'Lounge bar' },
+  { src: img5, label: 'Jardín de noche' },
 ]
 
 export default function Home({ openModal }) {
@@ -83,14 +117,14 @@ export default function Home({ openModal }) {
             <div className="about-img-wrap reveal-l">
               <div className="about-img-main">
                 <img
-                  src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=900&q=80"
+                  src={img1}
                   alt="Salón principal Villa Esmeralda"
                   loading="lazy"
                 />
               </div>
               <div className="about-img-accent">
                 <img
-                  src="https://images.unsplash.com/photo-1464344497347-6f4f7c3d2f28?auto=format&fit=crop&w=400&q=80"
+                  src={img2}
                   alt="Detalle decoración"
                   loading="lazy"
                 />

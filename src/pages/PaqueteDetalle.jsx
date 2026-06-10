@@ -2,6 +2,9 @@ import { useParams, Link, Navigate } from 'react-router-dom'
 import Breadcrumb from '../components/Breadcrumb'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 import { PACKAGES } from './Paquetes'
+import img3 from '../assets/img3.png'
+import img4 from '../assets/img4.png'
+import img5 from '../assets/img5.png'
 
 const EXTRA_DETAILS = {
   basico: {
@@ -10,8 +13,8 @@ const EXTRA_DETAILS = {
     duration: 'Hasta 8 horas',
     extras: ['Atención personalizada', 'Mesa de honor incluida', 'Servicio de agua y café'],
     gallery: [
-      'https://images.unsplash.com/photo-1464344497347-6f4f7c3d2f28?auto=format&fit=crop&w=900&q=80',
-      'https://images.unsplash.com/photo-1523416091380-8a21a3a1f0e8?auto=format&fit=crop&w=900&q=80',
+      img3,
+      img4,
     ],
   },
   premium: {
@@ -20,8 +23,8 @@ const EXTRA_DETAILS = {
     duration: 'Hasta 10 horas',
     extras: ['DJ incluido', 'Barra libre de bebidas', 'Decoración floral básica', 'Fotógrafo 4 hrs'],
     gallery: [
-      'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=900&q=80',
-      'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=900&q=80',
+      img5,
+      img4,
     ],
   },
   luxury: {
@@ -30,8 +33,8 @@ const EXTRA_DETAILS = {
     duration: 'Hasta 12 horas',
     extras: ['Coordinador VIP dedicado', 'Catering gourmet completo', 'Fotografía y video full day', 'Decoración premium personalizada'],
     gallery: [
-      'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=900&q=80',
-      'https://images.unsplash.com/photo-1560448204-e02be3b1d08b?auto=format&fit=crop&w=900&q=80',
+      img3,
+      img4,
     ],
   },
 }

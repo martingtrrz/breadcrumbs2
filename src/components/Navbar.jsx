@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { NavLink, Link, useLocation } from 'react-router-dom'
-
+import Logo from './Logo' 
 const NAV_LINKS = [
   { to: '/', label: 'Inicio', end: true },
   { to: '/galeria', label: 'Galería' },

@@ -1,49 +1,54 @@
 import { useState, useEffect } from 'react'
 import Breadcrumb from '../components/Breadcrumb'
 import { useScrollReveal } from '../hooks/useScrollReveal'
+import img1 from '../assets/img1.png'
+import img2 from '../assets/img2.png'
+import img3 from '../assets/img3.png'
+import img4 from '../assets/img4.png'
+import img5 from '../assets/img5.png'
 
 const SPACES = [
   {
     id: 'salon-principal',
-    src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=80',
-    thumb: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=700&q=80',
+    src: img1,
+    thumb: img1,
     label: 'Salón principal',
     desc: 'Nuestro salón más emblemático, con capacidad para 350 invitados.',
     tall: true,
   },
   {
     id: 'terraza',
-    src: 'https://images.unsplash.com/photo-1464344497347-6f4f7c3d2f28?auto=format&fit=crop&w=1200&q=80',
-    thumb: 'https://images.unsplash.com/photo-1464344497347-6f4f7c3d2f28?auto=format&fit=crop&w=700&q=80',
+    src: img2,
+    thumb: img2,
     label: 'Terraza exterior',
     desc: 'Espacio al aire libre rodeado de vegetación y vistas panorámicas.',
   },
   {
     id: 'banquetes',
-    src: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80',
-    thumb: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=700&q=80',
+    src: img3,
+    thumb: img3,
     label: 'Salón de banquetes',
     desc: 'Configuración perfecta para cenas y banquetes de gala.',
   },
   {
     id: 'jardin',
-    src: 'https://images.unsplash.com/photo-1523416091380-8a21a3a1f0e8?auto=format&fit=crop&w=1200&q=80',
-    thumb: 'https://images.unsplash.com/photo-1523416091380-8a21a3a1f0e8?auto=format&fit=crop&w=700&q=80',
+    src: img4,
+    thumb: img4,
     label: 'Jardín de noche',
     desc: 'Iluminación ambiental que transforma el jardín en un espacio mágico.',
     tall: true,
   },
   {
     id: 'lounge',
-    src: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=1200&q=80',
-    thumb: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=700&q=80',
+    src: img5,
+    thumb: img5,
     label: 'Lounge & bar',
     desc: 'Zona lounge con barra completa para cocteles y bebidas premium.',
   },
   {
     id: 'suite',
-    src: 'https://images.unsplash.com/photo-1560448204-e02be3b1d08b?auto=format&fit=crop&w=1200&q=80',
-    thumb: 'https://images.unsplash.com/photo-1560448204-e02be3b1d08b?auto=format&fit=crop&w=700&q=80',
+    src: img1,
+    thumb: img1,
     label: 'Suite nupcial',
     desc: 'Área privada para novios, con mobiliario exclusivo y decoración floral.',
   },
