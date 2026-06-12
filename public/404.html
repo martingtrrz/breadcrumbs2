@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página no encontrada - Villa Esmeralda</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --navy: #0b1a32;
+      --navy-hover: #132240;
+      --gold: #c8a84b;
+      --cream: #fdfaf6; /* offwhite */
+      --muted: #7e8494;
+    }
+    
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--cream);
+      font-family: 'DM Sans', sans-serif;
+      text-align: center;
+      color: var(--navy);
+    }
+
+    /* Marca superior */
+    .brand {
+      position: absolute;
+      top: 2.5rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
+    .brand em {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    /* Contenido central */
+    .error-code {
+      font-family: 'Playfair Display', serif;
+      font-size: 8rem;
+      font-weight: 600;
+      margin: 0;
+      line-height: 1;
+      color: var(--gold);
+      text-shadow: 0 10px 30px rgba(200, 168, 75, 0.15);
+    }
+    
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 600;
+      margin: 1.5rem 0 1rem;
+      letter-spacing: -0.02em;
+    }
+    
+    p {
+      color: var(--muted);
+      max-width: 420px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+    
+    /* Botón de regreso */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background-color: var(--navy);
+      color: white;
+      text-decoration: none;
+      padding: 0.8rem 1.6rem;
+      border-radius: 0.5rem;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: all 0.2s ease-in-out;
+      box-shadow: 0 4px 6px -1px rgba(11, 26, 50, 0.1), 0 2px 4px -1px rgba(11, 26, 50, 0.06);
+    }
+    
+    .btn:hover {
+      background-color: var(--navy-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 10px 15px -3px rgba(11, 26, 50, 0.1), 0 4px 6px -2px rgba(11, 26, 50, 0.05);
+    }
+
+    .btn svg {
+      transition: transform 0.2s;
+    }
+
+    .btn:hover svg {
+      transform: translateX(-3px);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="brand">Villa <em>Esmeralda</em></div>
+  
+  <div class="error-code">404</div>
+  <h1>Página no encontrada</h1>
+  <p>Lo sentimos, la ruta que intentas visitar no existe, ha sido movida o requiere permisos especiales de acceso.</p>
+  
+  <a href="/" class="btn">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m15 18-6-6 6-6"/>
+    </svg>
+    Volver al inicio
+  </a>
+
+</body>
+</html>
