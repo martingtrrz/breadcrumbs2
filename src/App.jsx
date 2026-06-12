@@ -20,6 +20,7 @@ import Configuracion from './pages/Configuracion'
 
 // Componentes
 import ReserveModal from './components/ReserveModal'
+import NotFound from './pages/NotFound'
 
 function App() {
   const [modal, setModal] = useState({ open: false, pkg: null })
@@ -45,6 +46,9 @@ function App() {
           <Route path="eventos" element={<Eventos />} />
           <Route path="config" element={<Configuracion />} />
         </Route>
+
+        {/* Ruta para 404 */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
       
       <ReserveModal modal={modal} onClose={closeModal} />
